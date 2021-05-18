@@ -1,0 +1,38 @@
+{
+  "name": "trigram-similarity",
+  "version": "1.0.0",
+  "description": "Determining the similarity of alphanumeric text based on trigram matching",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require @babel/register",
+    "build": "babel src --presets @babel/preset-env --plugins @babel/plugin-transform-runtime --out-dir dist --copy-files",
+    "prepublish": "npm run build"
+  },
+  "author": "Stephan Georg <s.georg@hey.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephanGeorg/iso-countries-lookup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/StephanGeorg/iso-countries-lookup/issues"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.14.0",
+    "@drorgl/n-gram": "^1.1.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/eslint-parser": "^7.13.10",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-stage-2": "^7.8.3",
+    "@babel/register": "^7.13.8",
+    "chai": "^4.3.4",
+    "eslint": "^7.22.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "mocha": "^8.3.2"
+  }
+}
