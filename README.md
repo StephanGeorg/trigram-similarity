@@ -1,7 +1,7 @@
-# trigram-similarity
+# trigram-similarity [![npm version](https://badge.fury.io/js/trigram-similarity.svg)](https://badge.fury.io/js/trigram-similarity)
 
 The trigram-similarity module provides functions and operators for determining the similarity of alphanumeric text based on trigram matching.
-This is the exact implementation of Postgres [pg_trgm](https://www.postgresql.org/docs/13/pgtrgm.html) and returns a number that indicates how 
+This is the JavaScript implementation of Postgres [pg_trgm](https://www.postgresql.org/docs/13/pgtrgm.html) and returns a number that indicates how 
 similar the two arguments are. The range of the result is zero (indicating that the two strings are completely dissimilar) to one (indicating 
 that the two strings are identical). 
 
