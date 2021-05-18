@@ -12,10 +12,10 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/StephanGeorg/iso-countries-lookup.git"
+    "url": "git+https://github.com/StephanGeorg/trigram-similarity.git"
   },
   "bugs": {
-    "url": "https://github.com/StephanGeorg/iso-countries-lookup/issues"
+    "url": "https://github.com/StephanGeorg/trigram-similarity/issues"
   },
   "dependencies": {
     "@babel/runtime": "^7.14.0",
