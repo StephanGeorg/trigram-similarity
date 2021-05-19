@@ -4,7 +4,7 @@ import { trigram } from '@drorgl/n-gram';
  * Two blank spaces are added at the beginning, and one at the end,
  * and single spaces are replaced by double ones.
  * @param {string} input
- * @returns string
+ * @returns {string}
  */
 const convertString = (input = '') => {
   if (!input.trim()) return '';
@@ -41,9 +41,9 @@ const trigramSimilarity = (input1 = '', input2 = '') => {
     if (trigrams2.includes(trigramItem)) common.push(trigramItem);
   });
 
-  if (total.length === 0) return 0;
-
-  return common.length / total.length;
+  return (total.length === 0)
+    ? 0
+    : common.length / total.length;
 };
 
 export default trigramSimilarity;
