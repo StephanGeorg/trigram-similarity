@@ -1,6 +1,6 @@
 {
   "name": "trigram-similarity",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Determining the similarity of alphanumeric text based on trigram matching",
   "main": "./dist/index.js",
   "scripts": {
