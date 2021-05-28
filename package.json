@@ -2,7 +2,7 @@
   "name": "trigram-similarity",
   "version": "1.0.2",
   "description": "Determining the similarity of alphanumeric text based on trigram matching",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "mocha --require @babel/register",
     "build": "babel src --presets @babel/preset-env --plugins @babel/plugin-transform-runtime --out-dir dist --copy-files",
