@@ -20,8 +20,12 @@ const convertString = (input = '') => {
  * @param {string} input
  * @returns {string}
  */
-const generateTrigram = (input = '') => [...new Set(trigram(convertString(input))
-  .filter((trigramItem) => !/^[\p{Letter}\p{Mark}0-9]\s\s$/giu.test(trigramItem)))];
+const generateTrigram = (input = '') => [
+  ...new Set( // De-duplication
+    trigram(convertString(input)) // Generating trigrams w/ prepared input
+      .filter((trigramItem) => !/^[\p{Letter}\p{Mark}0-9]\s\s$/giu.test(trigramItem)),
+  ),
+];
 
 /**
  * Calculate trigram similarity between 2 strings
