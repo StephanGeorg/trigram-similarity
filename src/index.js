@@ -34,6 +34,8 @@ const generateTrigram = (input = '') => [
  * @returns {number}
  */
 const trigramSimilarity = (input1 = '', input2 = '') => {
+  if (input1.trim() && input1 === input2) return 1;
+
   const trigrams1 = generateTrigram(input1);
   const trigrams2 = generateTrigram(input2);
 

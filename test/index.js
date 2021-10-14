@@ -2,16 +2,22 @@ import { expect } from 'chai';
 
 import trigramSimilarity from '../src/index';
 
-describe('Succesful returning country codes  ...', () => {
+describe('Successful returning similarities  ...', () => {
   it('Similarity between strings', (done) => {
     const similarity = trigramSimilarity('Chateau blanc', 'chateau cheval blanc');
     expect(similarity).to.be.equal(0.7368421052631579);
     done();
   });
 
-  it('Simlarity between strings")', (done) => {
+  it('Similarity between strings"', (done) => {
     const similarity = trigramSimilarity('Glogauer str', 'Glogauer Stra');
     expect(similarity).to.be.equal(0.8);
+    done();
+  });
+
+  it('Similarity between short strings"', (done) => {
+    const similarity = trigramSimilarity('a1', 'a1');
+    expect(similarity).to.be.equal(1);
     done();
   });
 
