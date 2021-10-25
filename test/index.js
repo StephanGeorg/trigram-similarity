@@ -51,7 +51,19 @@ describe('Successful returning similarities  ...', () => {
     done();
   });
 
-  it('Similarity of empty strings', (done) => {
+  it('Similarity of undefined values', (done) => {
+    const similarity = trigramSimilarity(undefined, undefined);
+    expect(similarity).to.be.equal(0);
+    done();
+  });
+
+  it('Similarity of null values', (done) => {
+    const similarity = trigramSimilarity(null, undefined);
+    expect(similarity).to.be.equal(0);
+    done();
+  });
+
+  it('Similarity of blank spaces', (done) => {
     const similarity = trigramSimilarity(' ', ' ');
     expect(similarity).to.be.equal(0);
     done();

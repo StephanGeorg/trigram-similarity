@@ -7,7 +7,7 @@ import { trigram } from '@drorgl/n-gram';
  * @returns {string}
  */
 const convertString = (input = '') => {
-  if (!input.trim()) return '';
+  if (!input || !input.trim()) return '';
   return `  ${input
     .trim()
     .replace(/\s+/g, ' ') // replace multiple spaces w/ single spaces
@@ -34,7 +34,7 @@ const generateTrigram = (input = '') => [
  * @returns {number}
  */
 const trigramSimilarity = (input1 = '', input2 = '') => {
-  if (input1.trim() && input1 === input2) return 1;
+  if (input1 && input1.trim() && input1 === input2) return 1;
 
   const trigrams1 = generateTrigram(input1);
   const trigrams2 = generateTrigram(input2);
